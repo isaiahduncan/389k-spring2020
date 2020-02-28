@@ -1,3 +1,85 @@
 <!-- We have purposely given you an empty file. We want you to get some practice with creating all the tags from the ground up.
  -->
+ <!DOCTYPE html>
+ <html>
+     <style>
+         #name{
+            text-align: center;
+         }
+         #tbl{
+             font-style: italic;
+             margin:auto;
+             width: 60%;
+             border: 3px solid black;
+             border-collapse: collapse;
+         }
+         th, td{
+             border: 1px solid black;
+             border-collapse: collapse;
+         }
+         #heading{
+             text-align: center;
+         }
+         body{
+            background-color:ghostwhite;
+            margin: 25px 50px 75px 100px;
+         }
 
+         .txt{
+            display: inline;
+             padding: 0% 10% 0% 10%;
+         }
+
+         .colePic{
+             width: 80%;
+             padding: 5% 10% 5% 10%;
+         }
+
+         #site{
+             display:block;
+         }
+
+         @media screen and (max-width: 500px) {
+             body { 
+                 background-color:indigo;
+                 }
+                 }
+
+     </style>
+ <head>
+ <title>Isaiah Project 1</title>
+ </head>
+ <body >
+ 
+ <h1 id="name">Isaiah Duncan</h1>
+ <p class="txt">I'm a Junior Computer Science Major and I'm taking this class becuase I wanted to get a little bit of experience with web development.</p>
+
+ <img class="colePic" src="https://djbooth.net/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTU1MTMzNDU2Mzc0ODM0NjU2/j-cole-kanye-west-rapper-role-modles2.webp">
+
+ <table id="tbl">
+     <tr>
+        <th id="heading" colspan="2">Some Things About Me</th>
+     </tr>
+        
+     <tr>
+        <td>Places I've Lived</td>
+        <td>North Carolina, Germany, Maryland</td>
+     </tr>
+
+     <tr>
+        <td>Favorite Artists</td>
+        <td>J. Cole, Chris Brown, Notorious B.I.G.</td>
+     </tr>
+
+     <tr>
+        <td>Hobbies</td>
+        <td>Gym, Poetry, Piano, Anime</td>
+     </tr>
+ </table>
+
+ <div>
+     Here is a Link to <a id="site" href="http://www.dreamville.com/">J.cole's Website!</a>
+ </div>
+ 
+ </body>
+ </html>

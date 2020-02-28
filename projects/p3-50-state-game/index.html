@@ -9,6 +9,47 @@
     <meta charset="UTF-8">
     <title>50 State Game</title>
     <style type="text/css">
+
+    h2{
+        color: red;
+    }
+
+    #timerholder, #startButtonHolder, #inputHolder, #stateListHolder{
+        /*position: relative;
+        left: 4cm;
+        top: 4cm;*/
+        align-items: center;
+        /*padding: 90px 10% 0 10%;*/
+        border-style: solid;
+        background-color:#f2f2f2;
+        width:250px;
+        height:100px;
+    }
+
+    #stateListHolder{
+        padding: 0% 5% 20% 5%;
+    }
+
+    .holder{
+        /*background-color:blueviolet;*/
+        
+        /*white-space: nowrap;
+        overflow-x: auto;*/
+    }
+
+    .besidea {
+        position: relative;
+        left: 4cm;
+        top: 1cm;
+        /*display:inline-table;*/
+    }
+
+    .besideb {
+        position: relative;
+        left: 20cm;
+        top: 1cm;
+        /*display:inline-table;*/
+    }
         /* Do not worry about doing extensive styling. Please make sure it is
            obvious where the input bar, start button, running list of states,
            and timer all are. */
@@ -16,7 +57,7 @@
 </head>
 
 <body>
-
+    <div class="holder">
     <!--
     1. Implement the input element.
         You'll need to answer the the following questions (and probably more):
@@ -25,7 +66,10 @@
         the user hitting enter?
         3. How do I disable the input bar if the game is not in session?
     -->
-
+    <div id="inputHolder" class="besidea">
+            <label for="lfname">Type Here: </label> 
+            <input id="input" name="input" type="text" disabled/>
+    </div>
     <!--
     2. Implement the running list of states.
         1. What HTML will be inserted each time a user enters a correct state?
@@ -36,15 +80,24 @@
         4. How will I seperate the entered states from missed states when the
         game is over if the user lost the game?
     -->
+    <div id="stateListHolder" class="besideb"></div>
 
+    </div>
     <!--
     3. Implement the timer. This is almost all JavaScript.
     -->
+    <div class="holder">
 
+    <div id="timerholder" class="besidea"><p>Timer: </p><h1 id="timer">20</h1></div>
     <!--
     4. Implement the start button. The start button must activate the input box
     to allow input start the timer.
     -->
+    <div id="startButtonHolder" class="besideb">
+        <button id="button">Start Timer</button>
+    </div>
+
+    </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
     <script src="index.js" type="text/javascript"></script>

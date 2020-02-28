@@ -4,7 +4,7 @@
  */
 
 function helloWorld(){
-    throw new Error("unimplemented");
+    return "hello world";
 }
 
 /*
@@ -16,7 +16,7 @@ function helloWorld(){
  */
 
 function squareToString(num){
-    throw new Error("unimplemented");
+    return (num*num).toString();
 }
 
 /*
@@ -27,7 +27,11 @@ function squareToString(num){
  */
 
 function reverseString(str){
-    throw new Error("unimplemented");
+    var rev = "";
+    for (var c = str.length-1; c >= 0; c--) {
+        rev += str[c];
+    }
+    return rev;
 }
 
  /*
@@ -46,7 +50,21 @@ function reverseString(str){
   */
 
  function avgLenOfVals(dict){
-     throw new Error("unimplemented");
+     /*if(Object.keys(dict).length == 0){
+         return NaN
+     }*/
+
+     let keys = Object.keys(dict);
+     let count = 0.0; 
+     for(k of keys){
+        if(typeof dict[k] == "number"){
+            count += (""+dict[k]).length; //console.log("count++")
+        }else if(typeof dict[k] == "string"){
+            count += dict[k].length
+        } 
+     }
+     //console.log("count: ", count, ", klen: ", keys.length)
+     return keys.length > 0 ? (count/(keys.length)) : 0
  }
 
 /*
@@ -62,8 +80,31 @@ function reverseString(str){
  */
 
 function applyFunToArray(str, fun){
-    throw new Error("unimplemented");
+    var arr = str.split(", ")
+    for(i in arr){
+        arr[i] = arr[i].trim()
+    }
+    return fun(arr)
 }
+
+function lowerArr(arr){
+    var newArr = []
+    for (var i = 0; i < arr.length; i ++){
+        newArr[i] = arr[i].toLowerCase();
+    }
+    return newArr
+}
+
+//console.log(applyFunToArray("Hello, World", lowerArr))
+//console.log("abcdefghij".length)
+var ln = (""+53).length
+/*console.log(avgLenOfVals({
+    'hello': 'world',
+    'ishaan': 'parikh',
+    'sashi': 'thupu',
+    2:'hi',
+    3: 51
+}))*/
 
 module.exports = {
     helloWorld: helloWorld,
